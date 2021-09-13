@@ -30,12 +30,15 @@ module.exports = {
         template: './src/index.html'
     })],
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        disableHostCheck: true,
+	    public: "bonux.co:8083",
+
     },
     externals: {
         // global app config object
         config: JSON.stringify({
-            apiUrl: 'http://localhost:4000'
+            apiUrl: 'https://bonux.co:8084'
         })
     }
 }
